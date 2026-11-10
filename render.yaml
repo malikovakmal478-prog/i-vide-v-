@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: code2video-ai
+    runtime: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 900 --bind 0.0.0.0:$PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
