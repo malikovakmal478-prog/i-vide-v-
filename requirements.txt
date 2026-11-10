@@ -1,6 +1,0 @@
-fastapi==0.115.12
-uvicorn[standard]==0.34.2
-playwright==1.52.0
-imageio-ffmpeg==0.6.0
-numpy==2.2.5
-Pillow==11.2.1
