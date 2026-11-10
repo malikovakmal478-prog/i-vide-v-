@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: code2video-ai
-    runtime: python
-    plan: free
-    buildCommand: pip install -r requirements.txt && playwright install --with-deps chromium
-    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /health
